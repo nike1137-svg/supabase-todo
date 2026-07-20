@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 import { createClient } from "@/lib/supabase/server";
 import { InfoIcon } from "lucide-react";
@@ -33,6 +34,11 @@ export default function ProtectedPage() {
             <UserDetails />
           </Suspense>
         </pre>
+      </div>
+      <div>
+        <Link href="/protected/todos" className="font-bold text-lg underline">
+          내 할 일 목록 보기 →
+        </Link>
       </div>
       <div>
         <h2 className="font-bold text-2xl mb-4">Next steps</h2>
